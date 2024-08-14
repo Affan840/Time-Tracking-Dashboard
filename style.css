@@ -1,0 +1,284 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik:300,regular,500,600,700,800,900,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Rubik", "Helvetica Neue";
+  background-color: var(--Very-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  height: 500px;
+  width: 70vw;
+  color: white;
+}
+
+p {
+  font-size: 15px;
+  color: var(--Pale-Blue);
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 40px;
+}
+
+aside {
+  background-color: var(--Dark-blue);
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  border-radius: 14px;
+}
+
+aside>div {
+  border-radius: 14px;
+  width: 100%;
+  height: 350px;
+  padding: 30px;
+  background-color: var(--Blue);
+}
+
+aside div img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+aside div p {
+  margin-top: 40px;
+}
+
+aside ul {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+}
+
+aside ul li {
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Desaturated-blue);
+}
+
+.active{
+  color: white;
+}
+
+aside ul li:hover {
+  color: white;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+article{
+  border-radius: 14px;
+  width: 220px;
+  height: 230px;
+  border-radius: 14px;
+}
+
+article>img {
+  height: 80px;
+  width: 80px;
+  float: right;
+}
+
+article .inner-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 100%;
+    height: 85%;
+    bottom: 20%;
+  padding: 20px;
+  background-color: var(--Dark-blue);
+  border-radius: 14px;
+}
+
+article .inner-card:hover{
+  background-color:  hsl(236, 39%, 40%);
+}
+
+article .inner-card h1{
+  margin-top: 10px;
+}
+
+article .inner-card h4{
+  font-weight: 400;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article .inner-card h4 img{
+  cursor: pointer;
+}
+
+article .inner-card h4 img:hover{
+  color: white;
+  filter: brightness(100);
+}
+
+article .inner-card p{
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.Work {
+    background-color: var(--Light-red-work);
+}
+
+.Play {
+  background-color: var(--Soft-blue-play);
+}
+
+.Study {
+  background-color: var(--Light-red-study);
+}
+
+.Exercise {
+  background-color: var(--Lime-green-exercise);
+}
+
+.Social {
+  background-color: var(--Violet-social);
+}
+
+.Self-Care {
+  background-color: var(--Soft-orange-self-care);
+}
+
+@media (max-width: 1100px) {
+  body{
+    display: block;
+  }
+  main{
+    height: max-content;
+    width: 90vw;
+  }
+}
+
+@media (max-width: 768px) {
+  main{
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  aside{
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 170px;
+    margin: 20px 0;
+    width: 80vw;
+  }
+
+  aside>div{
+    width: 100%;
+    padding: 10px;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  aside>div>div{
+    display: flex;
+    flex-direction: column;
+  }
+
+    aside>div>div h1{
+      font-size: 20px;
+    }
+
+    aside>div>div p{
+      margin: 0;
+    }
+
+  aside ul{
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+        flex-direction: row;
+  }
+
+  section{
+    gap: 10px;
+    justify-content: space-around;
+  }
+
+  section article{
+    overflow: hidden;
+    height: 140px;
+    width: 80vw ;
+  }
+
+  section article>img{
+    position: relative;
+    top: -5%;
+    height: 40px;
+    width: 40px;
+  }
+
+  section article .inner-card{
+    height: 80%;
+    bottom: 5%;
+  }
+
+  section article .inner-card .hours{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+   section article .inner-card .hours h1{
+    font-size: 28px;
+   }
+}
